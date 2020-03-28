@@ -19,23 +19,23 @@ public class csharp_code {
 		 WebDriverWait waitSignIn = new WebDriverWait(driver, 10);
          waitSignIn.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("uh-signedin")));
 
-         IWebElement signIn = driver.FindElement(By.Id("uh-signedin"));
-         signIn.Click();
+         WebElement signIn = driver.FindElement(By.Id("uh-signedin"));
+         signIn.click();
 
          WebDriverWait waitLogin = new WebDriverWait(driver,10);
          waitLogin.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("login-username")));
 
-         IWebElement LoginField = driver.FindElement(By.Id("login-username"));
-         LoginField.SendKeys("jfdoyle_iii");
-         LoginField.SendKeys(Keys.Enter);
+         WebElement LoginField = driver.FindElement(By.Id("login-username"));
+         LoginField.sendKeys("jfdoyle_iii");
+         LoginField.sendKeys(Keys.ENTER);
 
-         WebDriverWait waitPassword= new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+         WebDriverWait waitPassword= new WebDriverWait(driver, 20);
          waitPassword.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("login-passwd")));
 
 
-         IWebElement passwordField = driver.FindElement(By.Id("login-passwd"));
-         passwordField.SendKeys("m93Fe8YHn");
-         passwordField.SendKeys(Keys.Enter);
+         WebElement passwordField = driver.FindElement(By.Id("login-passwd"));
+         passwordField.sendKeys("m93Fe8YHn");
+         passwordField.sendKeys(Keys.ENTER);
 
 
 
