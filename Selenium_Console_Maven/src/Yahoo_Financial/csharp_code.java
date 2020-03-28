@@ -1,5 +1,9 @@
 package Yahoo_Financial;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class csharp_code {
@@ -39,12 +44,22 @@ public class csharp_code {
          
          TimeUnit.SECONDS.sleep(20);
          
-		 driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1");
-		 WebDriverWait  waitStockTable = new WebDriverWait(driver,10);
-		 waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("table.W\\(100\\%\\)")));
-			 
+			/*
+			 * driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1"); WebDriverWait
+			 * waitStockTable = new WebDriverWait(driver,10);
+			 * waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.
+			 * cssSelector("table.W\\(100\\%\\)")));
+			 */
+		 Document doc = Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
+		 Elements stockTable = doc.select("table.W\\(100\\%\\)");
+		 for (Element headline : newsHeadlines) {
+			 System.out.println(headline.text());
+		 } 
 
-	        }finally {
+	        } catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
 	            driver.quit();
 	        }
 	    
