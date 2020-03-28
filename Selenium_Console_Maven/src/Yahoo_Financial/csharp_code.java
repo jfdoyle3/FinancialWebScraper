@@ -38,7 +38,7 @@ public class csharp_code {
          
 		 driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1");
 		 WebDriverWait  waitStockTable = new WebDriverWait(driver,10);
-		 waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table")));
+		 waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("table.W\\(100\\%\\)")));
 			 
 
 	        }finally {
