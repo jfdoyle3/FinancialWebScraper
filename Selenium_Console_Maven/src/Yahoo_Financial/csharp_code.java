@@ -9,9 +9,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
+import java.util.concurrent.TimeUnit;
+
 public class csharp_code {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		
 		 WebDriver driver = new FirefoxDriver();
@@ -35,6 +37,7 @@ public class csharp_code {
          passwordField.sendKeys("gIZiqxyILpfB1D");
          passwordField.sendKeys(Keys.ENTER);
          
+         TimeUnit.SECONDS.sleep(20);
          
 		 driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1");
 		 WebDriverWait  waitStockTable = new WebDriverWait(driver,10);
