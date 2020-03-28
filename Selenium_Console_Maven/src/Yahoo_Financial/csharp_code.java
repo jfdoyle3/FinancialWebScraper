@@ -51,7 +51,7 @@ public class csharp_code {
 			 * cssSelector("table.W\\(100\\%\\)")));
 			 */
 		 Document doc = Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
-		 System.out.println(doc.outerHtml());
+		 System.out.println(doc.text());
 			/*
 			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
 			 * stockTable) { System.out.println(stockTable.text()); }
