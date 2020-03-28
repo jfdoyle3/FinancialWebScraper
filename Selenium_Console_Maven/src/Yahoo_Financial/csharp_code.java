@@ -51,11 +51,11 @@ public class csharp_code {
 			 * cssSelector("table.W\\(100\\%\\)")));
 			 */
 		 Document doc = Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
-		 Elements stockTable = doc.select("table.W\\(100\\%\\)");
-		 for (Element headline : newsHeadlines) {
-			 System.out.println(headline.text());
-		 } 
-
+		 System.out.println(doc.outerHtml());
+			/*
+			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
+			 * stockTable) { System.out.println(stockTable.text()); }
+			 */
 	        } catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
