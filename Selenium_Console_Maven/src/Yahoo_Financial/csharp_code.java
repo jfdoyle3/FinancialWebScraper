@@ -18,13 +18,12 @@ public class csharp_code {
 		 driver.get("https://finance.yahoo.com");
 	    try {
 		 WebDriverWait waitSignIn = new WebDriverWait(driver, 20);
-         waitSignIn.until(ExpectedConditions.elementToBeClickable(By.id("uh-signedin")));
-         WebElement signIn = driver.findElement(By.id("uh-signedin"));
+		 WebElement signIn=  waitSignIn.until(presenceOfElementLocated(By.cssSelector("#header-signin-link > span")));
          signIn.click();
-
+   
          WebDriverWait waitLogin = new WebDriverWait(driver,20);
          waitLogin.until(ExpectedConditions.elementToBeClickable(By.id("login-username")));
-
+ 
          WebElement LoginField = driver.findElement(By.id("login-username"));
          LoginField.sendKeys("jfdoyle_iii");
          LoginField.sendKeys(Keys.ENTER);
@@ -35,10 +34,12 @@ public class csharp_code {
          WebElement passwordField = driver.findElement(By.id("login-passwd"));
          passwordField.sendKeys("gIZiqxyILpfB1D");
          passwordField.sendKeys(Keys.ENTER);
-
-			  driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1");
-			  WebDriverWait waitStockTable = new WebDriverWait(driver,10);
-			  waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table")));
+         
+         
+		 driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1");
+		 WebDriverWait  waitStockTable = new WebDriverWait(driver,10);
+		 waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table")));
+			 
 
 	        }finally {
 	            driver.quit();
