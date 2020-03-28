@@ -13,16 +13,16 @@ public class csharp_code {
 
 	public static void main(String[] args) {
 		
-	
+		
 		 WebDriver driver = new FirefoxDriver();
-	        WebDriverWait wait = new WebDriverWait(driver,10);
+		 driver.get("https://finance.yahoo.com");
 	    try {
-		 WebDriverWait waitSignIn = new WebDriverWait(driver, 10);
+		 WebDriverWait waitSignIn = new WebDriverWait(driver, 20);
          waitSignIn.until(ExpectedConditions.elementToBeClickable(By.id("uh-signedin")));
          WebElement signIn = driver.findElement(By.id("uh-signedin"));
          signIn.click();
 
-         WebDriverWait waitLogin = new WebDriverWait(driver,10);
+         WebDriverWait waitLogin = new WebDriverWait(driver,20);
          waitLogin.until(ExpectedConditions.elementToBeClickable(By.id("login-username")));
 
          WebElement LoginField = driver.findElement(By.id("login-username"));
@@ -32,18 +32,13 @@ public class csharp_code {
          WebDriverWait waitPassword= new WebDriverWait(driver, 20);
          waitPassword.until(ExpectedConditions.elementToBeClickable(By.id("login-passwd")));
 
-
          WebElement passwordField = driver.findElement(By.id("login-passwd"));
-         passwordField.sendKeys("m93Fe8YHn");
+         passwordField.sendKeys("gIZiqxyILpfB1D");
          passwordField.sendKeys(Keys.ENTER);
 
-
-
-			/*
-			 * driver.navigate().GoToUrl("https://finance.yahoo.com/portfolio/p_2/view/v1");
-			 * WebDriverWait waitStockTable = new WebDriverWait(driver,10);
-			 * waitStockTable.Until(ExpectedConditions.ElementExists(By.xpath("//table")));
-			 */
+			  driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1");
+			  WebDriverWait waitStockTable = new WebDriverWait(driver,10);
+			  waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table")));
 
 	        }finally {
 	            driver.quit();
