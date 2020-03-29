@@ -11,6 +11,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
+
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 import java.io.IOException;
@@ -19,7 +23,7 @@ import java.util.List;
 
 public class csharp_code {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws Exception {
 		
 		
 		 WebDriver driver = new FirefoxDriver();
@@ -68,13 +72,11 @@ public class csharp_code {
 			 * .Skip(1) .Where(tr => tr.Elements("td").Count()>1) .Select(tr =>
 			 * tr.Elements("td").Select(td => td.InnerText.Trim()).ToList()) .ToList();
 			 */
-	        } catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
 			}finally {
 	            driver.quit();
 	        }
 	    
-	    System.out.println("successful");
+	    System.out.println("End of Line");
 	}
 }
