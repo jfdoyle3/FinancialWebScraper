@@ -15,6 +15,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 public class csharp_code {
 
@@ -55,6 +56,14 @@ public class csharp_code {
 			/*
 			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
 			 * stockTable) { System.out.println(stockTable.text()); }
+			 */
+			/*
+			 * List<String> myList=new List<String>();
+			 */			/*
+			 * List<List<String>> stockTable =
+			 * financePage.DocumentNode.SelectSingleNode("//table") .Descendants("tr")
+			 * .Skip(1) .Where(tr => tr.Elements("td").Count()>1) .Select(tr =>
+			 * tr.Elements("td").Select(td => td.InnerText.Trim()).ToList()) .ToList();
 			 */
 	        } catch (IOException e) {
 				// TODO Auto-generated catch block
