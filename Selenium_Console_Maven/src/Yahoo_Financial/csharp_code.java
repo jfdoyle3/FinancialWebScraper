@@ -51,8 +51,11 @@ public class csharp_code {
 			 * waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.
 			 * cssSelector("table.W\\(100\\%\\)")));
 			 */
-		 Document doc = Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
-		 System.out.println(doc.text());
+		 //Document doc = Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
+		 //System.out.println(doc.text());
+		 
+		 final HttpResponse<String> response=Unirest.get("https://finance.yahoo.com/portfolio/p_2/view/v1").asString();
+			System.out.println(response.getBody());
 			/*
 			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
 			 * stockTable) { System.out.println(stockTable.text()); }
