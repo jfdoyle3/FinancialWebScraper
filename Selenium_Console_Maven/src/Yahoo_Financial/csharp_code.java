@@ -47,7 +47,7 @@ public class csharp_code {
          passwordField.sendKeys("gIZiqxyILpfB1D");
          passwordField.sendKeys(Keys.ENTER);
          
-         TimeUnit.SECONDS.sleep(20);
+         TimeUnit.SECONDS.sleep(25);
          
 			/*
 			 * driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1"); WebDriverWait
