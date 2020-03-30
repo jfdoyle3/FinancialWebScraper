@@ -63,7 +63,11 @@ public class csharp_code {
 		 
 			final Document htmlSnippet = Jsoup.parseBodyFragment(response.getBody());
 			System.out.println("Got Snippet"); 
-			System.out.println(htmlSnippet.child(0).text());
+			
+			for( Element stocks : htmlSnippet.select("table.W\\(100\\%\\) > thead.101 > tbody.137")) {
+				System.out.println(stocks.child(0).text());
+			}
+			//System.out.println(htmlSnippet.child(0).text());
 			/*
 			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
 			 * stockTable) { System.out.println(stockTable.text()); }
