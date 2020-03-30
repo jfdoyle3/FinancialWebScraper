@@ -59,7 +59,11 @@ public class csharp_code {
 		 //System.out.println(doc.text());
 		 
 		 final HttpResponse<String> response=Unirest.get("https://finance.yahoo.com/portfolio/p_2/view/v1").asString();
-			System.out.println(response.getBody());
+			//System.out.println(response.getBody());
+		 
+			final Document htmlSnippet = Jsoup.parseBodyFragment(response.getBody());
+			System.out.println("Got Snippet"); 
+			System.out.println(htmlSnippet.child(0).text());
 			/*
 			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
 			 * stockTable) { System.out.println(stockTable.text()); }
@@ -80,3 +84,36 @@ public class csharp_code {
 	    System.out.println("End of Line");
 	}
 }
+
+
+
+
+
+
+/*
+ * final String search="bicycle"; final String where="ri";
+ * 
+ * 
+ * 
+ * final HttpResponse<String> response = Unirest
+ * .get("https://www.yellowpages.com/search?") .queryString("search_terms",
+ * search) .queryString("geo_location_terms",where) .asString();
+ * 
+ * System.out.println(response.getBody());
+ * 
+ * 
+ * final Document htmlSnippet = Jsoup.parseBodyFragment(response.getBody());
+ * System.out.println("Got Snippet"); //
+ * System.out.println(htmlSnippet.outerHtml()); {
+ * 
+ * for (Element bikeShops : htmlSnippet.select("div.info")) {
+ * //System.out.println("results:");
+ * System.out.println(peopleResult.outerHtml());
+ * //System.out.println(bikeShops.child(1).text());
+ * 
+ * final String businnessName=bikeShops.child(0).text();
+ * 
+ * System.out.println(businnessName); }
+ * 
+ * System.out.println("end of line"); }
+ */
