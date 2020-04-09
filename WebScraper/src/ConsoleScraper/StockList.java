@@ -7,7 +7,7 @@ public class StockList {
 	static void listStocks() {
 		
 		 String[] symbols= {"IBM","TES","QWE"};
-		  String[] prices= {"$100.00","200.00","$1,000.23"};
+		 String[] prices= {"$100.00","200.00","$1,000.23"};
 		  
 		  ArrayList<Stock> listOfStocks=new ArrayList<Stock>();
 		 
@@ -23,9 +23,7 @@ public class StockList {
 			  for (Stock stockShare : listOfStocks) {
 			  System.out.println(stockShare.getSymbol()+" | "+stockShare.getPrice()); }
 			  
-			  System.out.println("Symbol: "+listOfStocks.get(1).getSymbol()+" Price: "+listOfStocks.get(1).getPrice());
-			  
-
+			  System.out.println("Symbol: "+listOfStocks.get(1).getSymbol()+" Price: "+listOfStocks.get(1).getPrice());	  
 	}
 
 }

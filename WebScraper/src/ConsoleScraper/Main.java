@@ -13,7 +13,7 @@ public class Main {
 	StockList.listStocks();
 	
 	
-	 Login.signIn();
+	// Login.signIn();
 
 	}
 
