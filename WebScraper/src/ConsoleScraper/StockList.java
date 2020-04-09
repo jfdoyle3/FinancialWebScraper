@@ -18,7 +18,6 @@ public class StockList {
 			  listOfStocks.add(share);
 		  }
 		  
-		  //listOfStocks.forEach(System.out::println);
 			
 			  for (Stock stockShare : listOfStocks) {
 			  System.out.println(stockShare.getSymbol()+" | "+stockShare.getPrice()); }
