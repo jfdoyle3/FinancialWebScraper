@@ -2,29 +2,49 @@ package ConsoleScraper;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class FileScraper {
 
 	public void scrapeFile() {
 
 		System.out.println("Scraping File");
+		 String path = "R:\\\\website\\\\Stocks - Stock Portfolio & Tracker - Yahoo Finance.html";
 
-		File input = new File("C:\\webpage\\Stocks - Stock Portfolio & Tracker - Yahoo Finance.html");
 		try {
-
-			// Document doc
-			// =Jsoup.parse(input,"UTF-8","https://finance.yahoo.com/portfolio/p_2/view");
-			Document doc = Jsoup.parse(input, "UTF-8");
-			System.out.println(doc.text());
-
-			  final Document htmlSnippet = Jsoup.parseBodyFragment(response.getBody());
-			 System.out.println("Got Snippet");
 			
-		} catch (IOException e) { // TODO Auto-generated catch block
+			String input = Files.readString(Paths.get(path));
+			
+			//Document doc = Jsoup.parseBodyFragment(input);
+			Document doc = Jsoup.parse(input, "UTF-8");
+
+
+			
+			 Element linkTbl = doc.select("table").first();
+			/* 
+			 * String text = doc.body().text(); String linkHref = link.attr("tr");
+			 * 
+			 * String linkText = link.text();
+			 * 
+			 * System.out.println(linkText);
+			 */
+			//Element content = doc.getElementById("content");
+			Elements links = linkTbl.getElementsByTag("td");
+			
+			for (Element link : links) {
+			  String linkHref = link.attr("tr");
+			  String linkText = link.text();
+			  System.out.println(linkText);
+			}
+			
+			
+		} catch (IOException e) { 
 			e.printStackTrace();
 		}
 
