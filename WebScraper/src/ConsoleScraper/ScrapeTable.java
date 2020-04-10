@@ -19,44 +19,50 @@ import com.mashape.unirest.http.Unirest;
 
 public class ScrapeTable {
 
-	public static void scrape() throws IOException {
+	public void scrape() throws IOException {
 		
-		  WebDriver driver = new FirefoxDriver();
+		System.out.println("scrape class starting");
+		
+		 WebDriver driver = new FirefoxDriver();
 		  driver.get("https://finance.yahoo.com/portfolio/p_2/view/v1"); 
 		  WebDriverWait waitStockTable = new WebDriverWait(driver,10);
 		  waitStockTable.until(ExpectedConditions.presenceOfElementLocated(By.
 		  cssSelector("table.W\\(100\\%\\)")));
-		 
-	 Document doc = Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
-	 System.out.println(doc.text());
-	
-		
-		  for(Element tableElement : tables){ if(tableElement.hasClass("W(100%)")){
-		  table = tableElement; } final String number = row.select("td").text();
-		  System.out.println(number);
-		  
-		  final HttpResponse<String>
-		  response=Unirest.get("https://finance.yahoo.com/portfolio/p_2/view/v1").
-		  asString(); //System.out.println(response.getBody());
-		  
-		  final Document htmlSnippet = Jsoup.parseBodyFragment(response.getBody());
-		  System.out.println("Got Snippet");
-		  
-		  Elements tables = htmlSnippet.select("table"); Element table = null;
-		  
-		  for(Element tableElement : tables){ if(tableElement.hasClass("W(100%)")){
-		  table = tableElement; } } System.out.println(table);
-		 
-		//System.out.println(htmlSnippet.child(0).text());
-		
-		  Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
-		  stockTable) { System.out.println(stockTable.text()); }
-		 
-		
-		  ArrayList<String> myList=new ArrayList<String>();
-		 			
-		  List<List<String>> stockTable = financePage.DocumentNode.SelectSingleNode("//table") .Descendants("tr")
-				  .Skip(1) .Where(tr => tr.Elements("td").Count()>1) .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList()) .ToList();
+			/*
+			 * Document doc =
+			 * Jsoup.connect("https://finance.yahoo.com/portfolio/p_2/view/v1").get();
+			 * System.out.println(doc.text());
+			 * 
+			 * 
+			 * for(Element tableElement : tables){ if(tableElement.hasClass("W(100%)")){
+			 * table = tableElement; } final String number = row.select("td").text();
+			 * System.out.println(number);
+			 * 
+			 * final HttpResponse<String>
+			 * response=Unirest.get("https://finance.yahoo.com/portfolio/p_2/view/v1").
+			 * asString(); //System.out.println(response.getBody());
+			 * 
+			 * final Document htmlSnippet = Jsoup.parseBodyFragment(response.getBody());
+			 * System.out.println("Got Snippet");
+			 * 
+			 * Elements tables = htmlSnippet.select("table"); Element table = null;
+			 * 
+			 * for(Element tableElement : tables){ if(tableElement.hasClass("W(100%)")){
+			 * table = tableElement; } } System.out.println(table);
+			 * 
+			 * //System.out.println(htmlSnippet.child(0).text());
+			 * 
+			 * Elements stockTable = doc.select("table.W\\(100\\%\\)"); for (Element td :
+			 * stockTable) { System.out.println(stockTable.text()); }
+			 * 
+			 * 
+			 * ArrayList<String> myList=new ArrayList<String>();
+			 * 
+			 * List<List<String>> stockTable =
+			 * financePage.DocumentNode.SelectSingleNode("//table") .Descendants("tr")
+			 * .Skip(1) .Where(tr => tr.Elements("td").Count()>1) .Select(tr =>
+			 * tr.Elements("td").Select(td => td.InnerText.Trim()).ToList()) .ToList();
+			 */
 		 
 	
 	
