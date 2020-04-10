@@ -15,7 +15,6 @@ public class Stock {
 		this.price = newPrice;
 	  }
 
-		
 	
 	  public String getSymbol() {
 	    return symbol;
