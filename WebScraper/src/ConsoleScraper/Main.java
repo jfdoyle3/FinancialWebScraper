@@ -7,18 +7,15 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
-	FileScraper fs=new FileScraper();
-	fs.scrapeFile();
-	// Login.signIn();
-	 
-	//StockList.listStocks();
 	
-		/*
-		 * ScrapeTable getStuff=new ScrapeTable(); getStuff.scrape();
-		 * 
-		 * 
-		 * System.out.println("End of Line");
-		 */
+	 Login.signIn(); 	
+	 
+	 
+	// Uncomment next line to have real time scrape to console.
+	// FileScraper fs=new FileScraper();
+	// fs.scrapeFile();
+	
+	 
 	}
 
 }

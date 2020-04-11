@@ -1,0 +1,237 @@
+{
+  "id": "9bef0c24-a548-4d40-b6b3-6f1afece9936",
+  "version": "2.0",
+  "name": "selenium",
+  "url": "https://login.yahoo.com",
+  "tests": [{
+    "id": "ba9ac32d-43a0-4a95-91a5-c78b03cd5f59",
+    "name": "YahooLogin",
+    "commands": [{
+      "id": "36075da4-86c8-40d4-9a2b-e7b6363bb812",
+      "comment": "",
+      "command": "open",
+      "target": "/config/login?.src=finance&.intl=us&.lang=en-US&.done=https%3A%2F%2Ffinance.yahoo.com%2F",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a5c29a0-7659-435c-bbc6-855e7c700a97",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x675",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3babba4-227e-4fa7-9fba-0d1cc391ace7",
+      "comment": "",
+      "command": "type",
+      "target": "name=passwd",
+      "targets": [
+        ["name=passwd", "name"],
+        ["css=.hidden-input-container > input", "css:finder"],
+        ["xpath=//input[@name='passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='username-country-code-field']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "gIZiqxyILpfB1D"
+    }, {
+      "id": "13e196cc-00fa-477d-aa1c-341c0367b79b",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=username", "name"],
+        ["css=#login-username", "css:finder"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//div[@id='username-country-code-field']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "jfdoyle_iii"
+    }, {
+      "id": "a8eeec16-88a8-49b8-bf8c-899b4354e824",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-signin",
+      "targets": [
+        ["id=login-signin", "id"],
+        ["name=signin", "name"],
+        ["css=#login-signin", "css:finder"],
+        ["xpath=//input[@id='login-signin']", "xpath:attributes"],
+        ["xpath=//form[@id='login-username-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "239ac3a1-4957-486e-92c3-ffe62bc09784",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-passwd",
+      "targets": [
+        ["id=login-passwd", "id"],
+        ["name=password", "name"],
+        ["css=#login-passwd", "css:finder"],
+        ["xpath=//input[@id='login-passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='password-container']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "gIZiqxyILpfB1D"
+    }, {
+      "id": "b365834a-7025-40f6-9ed4-a90bc9c57a56",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-signin",
+      "targets": [
+        ["id=login-signin", "id"],
+        ["name=verifyPassword", "name"],
+        ["css=#login-signin", "css:finder"],
+        ["xpath=//button[@id='login-signin']", "xpath:attributes"],
+        ["xpath=//div[@id='password-challenge']/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e0d9667-9946-4bb9-8fe2-7489cbb67e23",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.nr-applet-main-nav-item:nth-child(3) > .nr-applet-nav-item", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbf87d6c-a26a-42b8-b4b9-3b2d41d9a698",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.nr-applet-main-nav-item:nth-child(3) > .nr-applet-nav-item", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdecd9fb-7374-4d6e-9703-f5dfc0e4a9bd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.nr-applet-main-nav-item:nth-child(3) > .nr-applet-nav-item", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "710afb55-49cc-4144-b231-13fd6731eeac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.C\\(\\$finNavBlueText\\)\\!", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7ba4dc7-ce2f-4969-99c0-98c15ec43ad1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Stocks",
+      "targets": [
+        ["linkText=Stocks", "linkText"],
+        ["css=.nr-subnav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Stocks')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolio/p_2/view')]", "xpath:href"],
+        ["xpath=//li[3]/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ab66bd7-36d0-4ffd-81e8-d41c15243a60",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.C\\(\\$finNavBlueText\\)\\!", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a8750b2-4660-4ce5-a35b-96362a561876",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.C\\(\\$finNavBlueText\\)\\!", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8c0dcec-10e3-44fb-8f1f-418d36e5893e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=My Portfolio",
+      "targets": [
+        ["linkText=My Portfolio", "linkText"],
+        ["css=.C\\(\\$finNavBlueText\\)\\!", "css:finder"],
+        ["xpath=//a[contains(text(),'My Portfolio')]", "xpath:link"],
+        ["xpath=//div[@id='Nav-0-DesktopNav']/div/div[3]/div/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolios')]", "xpath:href"],
+        ["xpath=//div[3]/div/nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Portfolio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "394637e8-a404-4efb-a80c-b7bfaa9b113c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.IbBox > .Fz\\(14px\\)",
+      "targets": [
+        ["css=.IbBox > .Fz\\(14px\\)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Stocks')])[2]", "xpath:link"],
+        ["xpath=//div[@id='Col1-0-Portfolios-Proxy']/main/table/tbody/tr/td/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/portfolio/p_2/view')])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e334ad12-05e7-486c-9b74-5d531239d76e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ba9ac32d-43a0-4a95-91a5-c78b03cd5f59"]
+  }],
+  "urls": ["https://login.yahoo.com/"],
+  "plugins": []
+}

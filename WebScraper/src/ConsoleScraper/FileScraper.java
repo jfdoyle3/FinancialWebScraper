@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -21,28 +22,26 @@ public class FileScraper {
 			
 			String input = Files.readString(Paths.get(path));
 			
-			//Document doc = Jsoup.parseBodyFragment(input);
+
 			Document doc = Jsoup.parse(input, "UTF-8");
 
+			ArrayList<String> data=new ArrayList();
+			
+			Element table = doc.select("table").first();
 
+			Elements tableData = table.getElementsByTag("td");
 			
-			 Element linkTbl = doc.select("table").first();
-			/* 
-			 * String text = doc.body().text(); String linkHref = link.attr("tr");
-			 * 
-			 * String linkText = link.text();
-			 * 
-			 * System.out.println(linkText);
-			 */
-			//Element content = doc.getElementById("content");
-			Elements links = linkTbl.getElementsByTag("td");
-			
-			for (Element link : links) {
-			  String linkHref = link.attr("tr");
-			  String linkText = link.text();
-			  System.out.println(linkText);
+			for (Element shares : tableData) {
+			  String tableRow = shares.attr("tr");
+			  String share = shares.text();
+			  data.add(share);
 			}
+			System.out.println("Stored data");
 			
+			for(String share : data) {
+				System.out.println(share);
+			}
+				
 			
 		} catch (IOException e) { 
 			e.printStackTrace();
