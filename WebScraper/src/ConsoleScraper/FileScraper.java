@@ -18,7 +18,7 @@ public class FileScraper {
 
 		System.out.println("scrape File class starting");
 		String path = "R:\\\\website\\\\Stocks - Stock Portfolio & Tracker - Yahoo Finance.html";
-	//	ArrayList<ArrayList<String>> dataTable = new ArrayList<ArrayList<String>>();
+		// ArrayList<ArrayList<String>> dataTable = new ArrayList<ArrayList<String>>();
 
 		try {
 
@@ -28,7 +28,7 @@ public class FileScraper {
 			Element bodyElements = doc.body();
 
 			Elements rowsCount = bodyElements.getElementsByTag("tr"),
-					 totalColsCount = bodyElements.getElementsByTag("td");
+					totalColsCount = bodyElements.getElementsByTag("td");
 
 			int colsCount = totalColsCount.size() / rowsCount.size();
 
@@ -39,7 +39,6 @@ public class FileScraper {
 //				}
 				System.out.println(rowsCount.get(rows).text());
 			}
-	
 
 		} catch (IOException e) {
 
@@ -49,8 +48,6 @@ public class FileScraper {
 		System.out.println("end of line");
 	}
 
-	
-	
 	public void workingDemo() {
 
 		System.out.println("Scraping File");
@@ -80,6 +77,19 @@ public class FileScraper {
 
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+
+	public void listToTable(ArrayList<String> tableData, int row, int col) {
+		
+		ArrayList<ArrayList<String>> dataTable=new ArrayList<ArrayList<String>>();
+		ArrayList<String> getRow=new ArrayList<String>();
+		
+		for(int tblRow=1; tblRow<row; tblRow++) {
+			for(int tblCol=0; tblCol<col; tblCol++) {
+				getRow.add(tableData.get(tblCol));
+			}
+			dataTable.add(getRow);
 		}
 	}
 }

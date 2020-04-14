@@ -1,0 +1,15 @@
+CREATE TABLE `financialscraper`.`stocktable` (
+
+		`ID`      INT   UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		`DateStamp`  DateTime  ,
+		`Symbol`     VARCHAR (50),
+		`LastPrice`  VARCHAR (50),
+		`ChngPrc`     VARCHAR (50),
+		`ChngPct`      VARCHAR (50),
+		`Currency`   VARCHAR (50),
+		`MarketTime` VARCHAR (50),
+		`Volume`     VARCHAR (50),
+		`AvgVol3m`   VARCHAR (50),
+		`MarketCap`  VARCHAR (50),
+		 
+);
