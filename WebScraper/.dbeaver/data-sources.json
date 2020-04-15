@@ -18,8 +18,7 @@
 				"provider-properties": {
 					"@dbeaver-serverTimezone@": "America/New_York"
 				},
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
 			}
 		}
 	},

@@ -17,8 +17,8 @@ public class DataBaseWriter {
 
 			String sql = "INSERT INTO simplestocktable (symbol, price) values (?, ?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, "TXI");
-			statement.setString(2, "1234.56");
+			statement.setString(1, "ABC");
+			statement.setString(2, "$100,900.33");
 			
 			 int row = statement.executeUpdate();
 			if (connection != null)

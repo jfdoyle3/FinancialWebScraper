@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql5-1717561e269-45d156310ae94cbd": {
+		"mysql5-171758c9893-71ca89fd33412337": {
 			"provider": "mysql",
 			"driver": "mysql5",
 			"name": "MySQL - financialscraper",
@@ -18,8 +18,7 @@
 				"provider-properties": {
 					"@dbeaver-serverTimezone@": "America/New_York"
 				},
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
 			}
 		}
 	},
