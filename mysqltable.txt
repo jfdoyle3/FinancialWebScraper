@@ -1,0 +1,39 @@
+    ID         INT,
+    DateStamp  DATE,
+    Symbol     VARCHAR(20),
+    LastPrice  VARCHAR(20),
+    Change     VARCHAR(20),
+    ChgPc      VARCHAR(20),
+    Currency   VARCHAR(20),
+    MarketTime VARCHAR(20),
+    Volume     VARCHAR(20),
+    AvgVol3m   VARCHAR(20),
+    MarketCap  VARCHAR(20),
+
+    CONSTRAINT PK_StockTable PRIMARY KEY CLUSTERED (ID ASC)
+	
+	
+	
+    id       INT NOT NULL,
+    datestamp  DATE,
+    symbol     VARCHAR(20),
+    lastprice  VARCHAR(20),
+    pricechange     VARCHAR(20),
+    changepercentage     VARCHAR(20),
+    currency   VARCHAR(20),
+    marketTime VARCHAR(20),
+    volume     VARCHAR(20),
+    avgvol   VARCHAR(20),
+    marketcap  VARCHAR(20),
+    
+    PRIMARY KEY (ID)
+
+  
+
+    ID int NOT NULL PRIMARY KEY,
+
+ALTER TABLE stocktable
+ADD PRIMARY KEY (id); 
+
+ALTER TABLE stocktable
+ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName); 

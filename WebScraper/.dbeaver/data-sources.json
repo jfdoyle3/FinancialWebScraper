@@ -1,10 +1,10 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql5-171758c9893-71ca89fd33412337": {
+		"mysql8-1718001da66-3a1b9e3d96ea6235": {
 			"provider": "mysql",
-			"driver": "mysql5",
-			"name": "MySQL - financialscraper",
+			"driver": "mysql8",
+			"name": "MySQL 8+ - financialscraper",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
@@ -18,7 +18,8 @@
 				"provider-properties": {
 					"@dbeaver-serverTimezone@": "America/New_York"
 				},
-				"auth-model": "native"
+				"auth-model": "native",
+				"handlers": {}
 			}
 		}
 	},
