@@ -26,7 +26,7 @@ public class DataBaseWriter {
 				statement.setString(2, stockList.get(idx).symbol);
 				statement.setString(3, stockList.get(idx).lastprice);
 
-				int row = statement.executeUpdate();
+				statement.executeUpdate();
 
 			}
 			if (connection != null)

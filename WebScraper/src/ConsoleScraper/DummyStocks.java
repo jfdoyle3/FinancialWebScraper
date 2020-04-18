@@ -30,17 +30,9 @@ public class DummyStocks {
 	}
 
 	public static Stock ShortStock(String symbol, String lastprice) {
-//		String symbol;
-//		String lastprice;
-//
-//		symbol = "SHORT";
-//		lastprice = "$1.00";
 
 		Stock share = new Stock(symbol, lastprice);
-//		System.out.println(share.symbol + " | " + share.lastprice);
 
 		return share;
 	}
-
-
 }
