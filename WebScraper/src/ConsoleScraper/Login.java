@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Login {
@@ -47,14 +48,17 @@ public class Login {
 			WebDriverWait waitStocks = new WebDriverWait(driver, 30);
 			waitStocks.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".IbBox > .Fz\\(14px\\)"))).click();
 
-			TimeUnit.SECONDS.sleep(10);
+			TimeUnit.SECONDS.sleep(5);
 			ScrapeTable data = new ScrapeTable();
-			data.scrape(driver.getPageSource());
-
+			ArrayList<String> stockList = data.scrape(driver.getPageSource());
+			StockList stockTable = new StockList();
+			ArrayList<Stock> stocks = stockTable.createStockList(stockList);
+			DataBaseWriter db = new DataBaseWriter();
+			db.writeToDatabase(stocks);
 		} finally {
 			driver.quit();
 
 		}
-		System.out.println("end of login");
+
 	}
 }
