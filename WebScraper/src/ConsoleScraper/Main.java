@@ -10,18 +10,17 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException, IOException {
 
 		 Login.signIn();
-		
 
-
-		
 		
 	//	 Uncomment next line to have real time scrape to console.
-//		 FileScraper fs = new FileScraper();
-//		 fs.scrapeFile();
+//		FileScraper fs = new FileScraper();
+	//	 fs.scrapeFile();
 		//ArrayList<Stock> stockList=new ArrayList<Stock>();
 		
 		//DataBaseWriter db = new DataBaseWriter();
-		//db.writeToDatabase(stockList);
+		//db.writeToDatabase(stockList); 
+		
+		System.out.println("end of line");
 	}
 
 }

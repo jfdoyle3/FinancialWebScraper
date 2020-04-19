@@ -1,37 +1,26 @@
 package ConsoleScraper;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.Unirest;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
-
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
-import java.util.List;
 
 public class Login {
 
 	static void signIn() throws InterruptedException, IOException {
 
 		System.out.println("Logging In");
-		WebDriver driver = new FirefoxDriver();
+		FirefoxOptions headless = new FirefoxOptions();
+		headless.setHeadless(true);
+
+		WebDriver driver = new FirefoxDriver(headless);
 		driver.get("https://finance.yahoo.com");
 		try {
 			WebDriverWait waitSignIn = new WebDriverWait(driver, 20);

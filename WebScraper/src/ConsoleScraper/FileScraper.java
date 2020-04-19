@@ -17,7 +17,7 @@ public class FileScraper {
 	public void scrapeFile() {
 
 		System.out.println("scrape File class starting");
-		String path = "R:\\\\website\\\\Stocks - Stock Portfolio & Tracker - Yahoo Finance.html";
+		String path = "R:\\\\website\\\\Stocks - Stock Portfolio & Tracker - Yahoo Finance.htm";
 		// ArrayList<ArrayList<String>> dataTable = new ArrayList<ArrayList<String>>();
 
 		try {
