@@ -17,7 +17,6 @@ public class Login {
 
 	static void signIn() throws InterruptedException, IOException {
 
-		System.out.println("Logging In");
 		FirefoxOptions headless = new FirefoxOptions();
 		headless.setHeadless(true);
 
@@ -55,6 +54,7 @@ public class Login {
 			ArrayList<Stock> stocks = stockTable.createStockList(stockList);
 			DataBaseWriter db = new DataBaseWriter();
 			db.writeToDatabase(stocks);
+
 		} finally {
 			driver.quit();
 

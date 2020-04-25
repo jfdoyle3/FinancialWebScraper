@@ -15,6 +15,10 @@
 				"url": "jdbc:mysql://192.168.1.201:3306/financialscraper",
 				"home": "C:\\Program Files\\MySQL\\MySQL Router 8.0",
 				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"allowPublicKeyRetrieval": "TRUE"
+				},
 				"provider-properties": {
 					"@dbeaver-serverTimezone@": "America/New_York"
 				},
