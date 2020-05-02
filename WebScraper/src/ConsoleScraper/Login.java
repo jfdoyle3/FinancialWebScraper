@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Login {
 
-	static void signIn() throws InterruptedException, IOException {
+	public static void signIn() throws InterruptedException, IOException {
 
 		FirefoxOptions headless = new FirefoxOptions();
 		headless.setHeadless(true);
