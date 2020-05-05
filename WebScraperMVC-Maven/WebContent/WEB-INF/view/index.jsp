@@ -20,9 +20,9 @@
 			out.println("Your IP address is " + request.getRemoteAddr());
 		%>
 		<br> <br>
-		<a href="login.jsp">Login</a>
+		<a href="login">Login</a>
 		<br>
-		 <a	href="scraper-table.jsp">Table</a>
+		 <a	href="scraper-table">Table</a>
 	</form>
 	<footer>
 		<i>Typed by the fingers of Jim Doyle</i>
