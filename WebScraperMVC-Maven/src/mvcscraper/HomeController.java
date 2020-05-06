@@ -10,7 +10,4 @@ public class HomeController {
 	public String showPage() {
 		return "login";
 	}
-	
-	
-
 }

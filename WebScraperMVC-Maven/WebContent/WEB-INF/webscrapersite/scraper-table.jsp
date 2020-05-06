@@ -1,11 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
+ <!-- let's add tag srping:url -->
+<spring:url value="/resources/css/scraper-table.css" var="scraper-tableCSS" />
+<link href="${scraper-tableCSS}" rel="stylesheet" />
+<!-- Finish adding tags -->
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="css/scraper-table.css"/>
 <title>Scrape Table</title>
 </head>
 <body>

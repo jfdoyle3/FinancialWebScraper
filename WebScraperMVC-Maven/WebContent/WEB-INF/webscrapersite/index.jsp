@@ -1,12 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- let's add tag srping:url -->
+<spring:url value="/resources/css/index.css" var="indexCSS" />
+<link href="${indexCSS}" rel="stylesheet" />
+<!-- Finish adding tags -->
+
 <meta charset="ISO-8859-1">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="css/index.css" />
 <title>Scraper</title>
 </head>
 <body>
@@ -19,6 +26,9 @@
 		<%
 			out.println("Your IP address is " + request.getRemoteAddr());
 		%>
+		<br>
+		<br>
+		CSS: ${pageContext.request.contextPath}
 		<br> <br>
 		<a href="login">Login</a>
 		<br>
