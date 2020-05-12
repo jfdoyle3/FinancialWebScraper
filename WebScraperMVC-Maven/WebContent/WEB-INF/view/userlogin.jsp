@@ -1,7 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%> --%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,8 +57,6 @@ button {
 	}
 }
 </style>
-<!--<spring:url value="/resources/css/login.css" var="loginCSS" />
-<link href="${loginCSS}" rel="stylesheet" /> -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"

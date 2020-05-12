@@ -35,8 +35,9 @@ h2 {
 		<%
 			out.println("Your IP address is " + request.getRemoteAddr());
 		%>
-		<br> <br> <a href="/login/userlogin">Login</a> <br> <a
-			href="scraper-table">Table</a>
+		<br> <br> <a href="login/showForm">Login</a> 
+		<br> 
+		<a href="scraper-table">Table</a>
 	</form>
 	<footer>
 		<i>Typed by the fingers of Jim Doyle</i>
