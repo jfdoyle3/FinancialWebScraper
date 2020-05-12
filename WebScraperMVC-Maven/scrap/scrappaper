@@ -1,0 +1,2 @@
+<form:input path="password" id="password" type="password" class="validate" />
+@Size(min=6, message="minium of 6 characters")

@@ -4,18 +4,21 @@
 <!DOCTYPE html>
 <html>
 <head>
- <!-- let's add tag srping:url -->
-<spring:url value="/resources/css/scraper-table.css" var="scraper-tableCSS" />
+<!-- let's add tag srping:url -->
+<spring:url value="/resources/css/scraper-table.css"
+	var="scraper-tableCSS" />
 <link href="${scraper-tableCSS}" rel="stylesheet" />
 <!-- Finish adding tags -->
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <title>Scrape Table</title>
 </head>
 <body>
 	<h2>Table</h2>
-	
-	<button>Scrape</button><button>Reset Table</button>
+
+	<button>Scrape</button>
+	<button>Reset Table</button>
 	<br>
 	<table style="width: 100%">
 		<tr>
@@ -162,7 +165,10 @@
 			<td>20.763M</td>
 			<td>129.316B</td>
 	</table>
-	<footer><i>Typed by the fingers of Jim Doyle</i></footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<footer>
+		<i>Typed by the fingers of Jim Doyle</i>
+	</footer>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
