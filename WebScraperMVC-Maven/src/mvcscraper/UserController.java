@@ -20,7 +20,7 @@ public class UserController {
 	// of all leading & ending white spaces and
 	// returns null if white spaces are the only entry.
 
-	@InitBinder
+	@InitBinder 
 	public void initEmailBinder(WebDataBinder emailDataBinder) {
 
 		StringTrimmerEditor trimEmail = new StringTrimmerEditor(true);
@@ -28,7 +28,7 @@ public class UserController {
 
 	}
 
-	@InitBinder
+	@InitBinder 
 	public void initPasswordBinder(WebDataBinder passwordDataBinder) {
 
 		StringTrimmerEditor trimPassword = new StringTrimmerEditor(true);

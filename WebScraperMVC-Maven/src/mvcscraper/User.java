@@ -6,12 +6,12 @@ import javax.validation.constraints.Size;
 
 public class User {
 	
-	@NotNull(message="enter a email address")
+	@NotNull(message="email may not be null")
 	@Pattern(regexp="^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", message="Invalid email address")
 	private String email;
 
 	
-	@NotNull(message="enter a password")
+	@NotNull(message="password may not be null")
 	@Size(min=6)
 	@Pattern(regexp="^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$", message="Minimum six characters, at least one letter and one number")
 	private String password;
