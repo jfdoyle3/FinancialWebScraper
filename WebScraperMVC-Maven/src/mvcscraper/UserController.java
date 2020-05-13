@@ -45,7 +45,7 @@ public class UserController {
 	}
 
 	@RequestMapping("/processForm")
-	public String processForm(@Valid @ModelAttribute("login") User user, BindingResult userBindingResult) {
+	public String processForm(@Valid @ModelAttribute("user") User user, BindingResult userBindingResult) {
 
 		System.out.println("User email: |" + user.getEmail() + "|");
 		System.out.println("User password: |" + user.getPassword() + "|");
@@ -56,6 +56,7 @@ public class UserController {
 		} else {
 			return "scraper-table";
 		}
+		
 	}
 
 }

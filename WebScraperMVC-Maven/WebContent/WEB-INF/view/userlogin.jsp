@@ -1,4 +1,4 @@
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,16 +87,16 @@ button {
 				<div class="row">
 					<div class="input-field col s10">
 						<i class="material-icons prefix">email</i>
-						<form:input path="email" id="email" type="email" cssClass="error" />
-						<label for="email">Email</label>
+						<form:input path="email" id="lbl_email" type="email" cssClass="error" />
+						<label for="lbl_email">Email</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s10">
 						<i class="material-icons prefix">https</i>
-						<form:input path="password" id="password" type="password"
+						<form:input path="password" id="lbl_password" type="password"
 							cssClass="error" />
-						<label for="password">Password</label>
+						<label for="lbl_password">Password</label>
 					</div>
 				</div>
 				<div class="row">
