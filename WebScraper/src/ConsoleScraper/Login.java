@@ -23,6 +23,7 @@ public class Login {
 		WebDriver driver = new FirefoxDriver(headless);
 		driver.get("https://finance.yahoo.com");
 		try {
+			System.out.println("Logging into Yahoo Financial Web Page");
 			WebDriverWait waitSignIn = new WebDriverWait(driver, 20);
 			WebElement signIn = waitSignIn
 					.until(presenceOfElementLocated(By.cssSelector("#header-signin-link > span")));
@@ -39,7 +40,7 @@ public class Login {
 			waitPassword.until(ExpectedConditions.elementToBeClickable(By.id("login-passwd")));
 
 			WebElement passwordField = driver.findElement(By.id("login-passwd"));
-			passwordField.sendKeys("nTmIcJyzyNSMqY");
+			passwordField.sendKeys("QHQ89PFsizXbYWX");
 			passwordField.sendKeys(Keys.ENTER);
 
 			WebDriverWait waitPort = new WebDriverWait(driver, 20);
@@ -48,13 +49,15 @@ public class Login {
 			waitStocks.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".IbBox > .Fz\\(14px\\)"))).click();
 
 			TimeUnit.SECONDS.sleep(5);
+			System.out.println("Scrapping Stock Table");
 			ScrapeTable data = new ScrapeTable();
 			ArrayList<String> stockList = data.scrape(driver.getPageSource());
 			StockList stockTable = new StockList();
 			ArrayList<Stock> stocks = stockTable.createStockList(stockList);
+			System.out.println("Scrapping table completed.\nWriting to Database");
 			DataBaseWriter db = new DataBaseWriter();
 			db.writeToDatabase(stocks);
-
+			System.out.println("Database entries completed\nEnd of Line.");
 		} finally {
 			driver.quit();
 
