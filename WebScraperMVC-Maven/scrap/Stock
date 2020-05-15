@@ -1,0 +1,26 @@
+package ConsoleScraper;
+
+public class Stock {
+
+	private String symbol;
+	private String lastprice;
+	private String pricechange;
+	private String changepercentage;
+	private String markettime;
+	private String volume;
+	private String avgvol;
+	private String marketcap;
+
+	public Stock(String Symbol, String LastPrice, String PriceChange, String ChangePercentage, String MarketTime,
+			String Volume, String AvgVol, String MarketCap) {
+
+		this.symbol = Symbol;
+		this.lastprice = LastPrice;
+		this.pricechange = PriceChange;
+		this.changepercentage = ChangePercentage;
+		this.markettime = MarketTime;
+		this.volume = Volume;
+		this.avgvol = AvgVol;
+		this.marketcap = MarketCap;
+	}
+}

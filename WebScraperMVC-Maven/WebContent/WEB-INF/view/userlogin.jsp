@@ -81,7 +81,6 @@ button {
 	<div class="row">
 		<div class="column"></div>
 		<div class="column">
-
 			<form:form action="processForm" modelAttribute="user"
 				class="col s12 offset-s1">
 				<div class="row">
