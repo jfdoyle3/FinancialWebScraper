@@ -56,7 +56,5 @@ public class UserController {
 		} else {
 			return "scraper-table";
 		}
-		
 	}
-
 }
