@@ -1,62 +1,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-* {
-	box-sizing: border-box;
-}
-
-body {
-	font-family: "IBM Plex Sans", sans-serif;
-}
-
-/* Style the header */
-.header {
-	padding: 30px;
-	text-align: center;
-	font-size: 35px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-	float: left;
-	width: 33.33%;
-	padding: 10px;
-	/*  height: 300px;  Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-button {
-	height: 20px;
-	width: 100px;
-	margin: -20px -10px;
-	position: relative;
-	top: 50%;
-	left: 50%;
-}
-/* Style the footer */
-.footer {
-	padding: 10px;
-	text-align: center;
-}
-
-.error {
-	color: red;
-}
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media ( max-width : 600px) {
-	.column {
-		width: 100%;
-	}
-}
-</style>
+<spring:url value="/resources/css/login.css" var="loginCSS" />
+<link href="${loginCSS}" rel="stylesheet" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"

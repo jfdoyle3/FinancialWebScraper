@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 public class QueryDB {
 
-	public static void main(String[] args) {
+	public static List<Stock> GetAllStocks() {
 
 		
 		SessionFactory factory = new Configuration().configure() 
@@ -36,6 +36,7 @@ public class QueryDB {
 			session.getTransaction().commit();
 			System.out.println("Transaction Completed!");
 			
+			return stocks;
 		} finally {
 			factory.close();
 		}
