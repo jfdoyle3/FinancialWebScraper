@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+<!DOCTYPE html>
 <html>
   <head>
-<spring:url value="/resources/css/scraper-table.css" var="scrapeTableCSS" />
-<link href="${scrapeTableCSS}" rel="stylesheet" />
+  <spring:url value="/resources/css/scraper-table.css" var="staticTableCSS" />
+<link href="${staticTableCSS}" rel="stylesheet" />
     <meta charset="ISO-8859-1" />
     <link
       rel="stylesheet"
@@ -23,13 +25,13 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
       rel="stylesheet"
     />
-    <title>Scrape Table</title>
+    <title>Static Table</title>
   </head>
   <body>
-    <h2>Table</h2>
+    <h2>Static Table</h2>
     <div class="container">
-      <a id="scraper" class="waves-effect waves-light btn">Scrape</a>
-      <a id="reset" class="waves-effect waves-light btn">Reset</a>
+      <a href="stock/processStocks" id="reset" class="waves-effect waves-light btn">Show Stock</a>
+ 
 
       <br />
       <table class="highlight">
