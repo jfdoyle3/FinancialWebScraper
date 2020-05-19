@@ -30,7 +30,7 @@
     <h2>Table</h2>
     <div class="container">
       <a id="scraper" class="waves-effect waves-light btn">Scrape</a>
-      <a id="reset" class="waves-effect waves-light btn">Reset</a>
+      <a href="id="reset" class="waves-effect waves-light btn">Reset</a>
 	 Welcome: <b>${user.email}</b>
       <br />
       <table class="highlight">

@@ -49,7 +49,7 @@ public class UserController {
 		if (userBindingResult.hasErrors()) {
 			return "userlogin";
 		} else {
-			return "scraper-table";
+			return "statictable";
 		}
 	}
 }

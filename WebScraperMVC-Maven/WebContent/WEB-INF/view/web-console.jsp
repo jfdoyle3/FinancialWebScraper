@@ -4,6 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="user"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="Stock"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +25,10 @@
 	<h3>Web Console Output</h3>
 	<br>
 	<br>
-	<form:form action="processForm" modelAttribute="stock">
+	<form:form action="processForm">
 	<table class="striped">
 		<tr>
-			<th>Symbol</th>
+			<th>Data</th>
 			<th>Description</th>
 		</tr>
 
@@ -37,8 +38,16 @@
 
 		</tr>
 		<tr>
-			<td>${stock.symbol}</td>
+			<td>${Stock}</td>
 			<td>data from object / database</td>
+		</tr>
+		<tr>
+			<td>${user.email}</td>
+			<td>User email</td>
+		</tr>
+		<tr>
+			<td>${user.password}</td>
+			<td>User password</td>
 		</tr>
 	</table>
 	</form:form>
