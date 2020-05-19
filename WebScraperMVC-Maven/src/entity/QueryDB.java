@@ -29,8 +29,8 @@ public class QueryDB {
 			List<Stock> stocks=session.createQuery("from Stock").getResultList();
 			
 		
-			System.out.println(">>--> All stocks in database <--<<");
-			displayStudents(stocks);
+			// System.out.println(">>--> All stocks in database <--<<");
+			// displayStudents(stocks);
 			
 			
 			session.getTransaction().commit();

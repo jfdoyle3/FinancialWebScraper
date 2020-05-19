@@ -10,7 +10,13 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<title>Scraper</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap"
+	rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
+	rel="stylesheet" />
+<title>Scraper Home</title>
 </head>
 <body>
 	<h2>Home Page</h2>
@@ -24,8 +30,7 @@
 		%>
 		<br> <br> <a href="login/showForm">Login</a> 
 		<br> 
-		<!--   <a href="stock/showForm">Stock Table</a> -->
-		<a href="stock/showForm"  class="waves-effect waves-light btn">Stock Table</a>
+		<a href="stock/showForm">Stock Table</a>
 	</form>
 	<footer>
 		<i>Typed by the fingers of Jim Doyle</i>

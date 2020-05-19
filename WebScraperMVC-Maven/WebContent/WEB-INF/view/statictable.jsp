@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <spring:url value="/resources/css/scraper-table.css" var="staticTableCSS" />
+  <spring:url value="/resources/css/statictable.css" var="staticTableCSS" />
 <link href="${staticTableCSS}" rel="stylesheet" />
     <meta charset="ISO-8859-1" />
     <link
@@ -30,7 +30,7 @@
   <body>
     <h2>Static Table</h2>
     <div class="container">
-      <a href="stock/processStocks" id="reset" class="waves-effect waves-light btn">Show Stock</a>
+      <a href="processStocks" id="reset" class="waves-effect waves-light btn">Show Stock</a>
  
 
       <br />
