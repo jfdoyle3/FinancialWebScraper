@@ -15,11 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/login")
 public class UserController {
 
-	// Hibernate Validation allows white spaces as valid entries.
-	// Need to add an initbinder to have it trim input strings
-	// of all leading & ending white spaces and
-	// returns null if white spaces are the only entry.
-
 	@InitBinder 
 	public void initEmailBinder(WebDataBinder emailDataBinder) {
 
@@ -36,7 +31,7 @@ public class UserController {
 
 	}
 
-	// @RequestMapping("/showForm")
+	@RequestMapping("/showForm")
 	public String showForm (Model userModel) {
 
 		userModel.addAttribute("user", new User());
