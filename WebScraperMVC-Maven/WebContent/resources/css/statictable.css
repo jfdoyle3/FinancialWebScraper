@@ -1,9 +1,9 @@
+@charset "ISO-8859-1";
+
 body {
-	background-color: LightRed;
-	font-family: "IBM Plex Sans", sans-serif;
+	background-color: GhostWhite;
 }
 
-h2 {
-	color: Blue;
+h3 {
 	margin-left: 20px;
 }

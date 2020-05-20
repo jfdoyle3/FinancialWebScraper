@@ -9,41 +9,25 @@ import org.hibernate.cfg.Configuration;
 
 public class QueryDB {
 
-	public static List<Stock> GetAllStocks() {
+	private static SessionFactory factory = new Configuration().configure().addAnnotatedClass(Stock.class)
+			.buildSessionFactory();
 
-		
-		SessionFactory factory = new Configuration().configure() 
-								 .addAnnotatedClass(Stock.class) 					
-								 .buildSessionFactory(); 							
-
+	private static Session session = factory.getCurrentSession();
+			
 	
-		Session session = factory.getCurrentSession();
-
-		try {
-
-
+			public static List<Stock> GetAllStocks() {
+			try {
 			session.beginTransaction();
-			
 
-			
-			List<Stock> stocks=session.createQuery("from Stock").getResultList();
-			
-		
-			// System.out.println(">>--> All stocks in database <--<<");
-			// displayStudents(stocks);
-			
-			
+			List<Stock> stocks = session.createQuery("from Stock").getResultList();
+
 			session.getTransaction().commit();
 			System.out.println("Transaction Completed!");
-			
+
 			return stocks;
+
 		} finally {
 			factory.close();
 		}
 	}
-		private static void displayStudents(List<Stock> stocks) {
-			for  (Stock stock : stocks) {
-				System.out.println(stock);
-			}
-		}
 }

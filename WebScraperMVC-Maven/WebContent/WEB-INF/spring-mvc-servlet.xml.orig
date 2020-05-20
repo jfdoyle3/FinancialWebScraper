@@ -16,8 +16,13 @@
 		base-package="mvcscraper" />
 
 	<!-- Step 4: Add support for conversion, formatting and validation support -->
+<<<<<<< HEAD
+
+
+=======
 	<mvc:resources mapping="/resources/**"
 		location="/resources/" />
+>>>>>>> origin/dev
 	<mvc:annotation-driven />
 
 	<!-- Step 5: Define Spring MVC view resolver -->
@@ -27,5 +32,11 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+<<<<<<< HEAD
+<mvc:resources mapping="/resources/**"
+		location="/resources/" />
+	<mvc:annotation-driven />
+=======
+>>>>>>> origin/dev
 </beans>
 
