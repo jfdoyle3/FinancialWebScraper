@@ -58,6 +58,7 @@ public class Login {
 			DataBaseWriter db = new DataBaseWriter();
 			db.writeToDatabase(stocks);
 			System.out.println("Database entries completed\nEnd of Line.");
+			
 		} finally {
 			driver.quit();
 

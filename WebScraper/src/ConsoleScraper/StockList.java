@@ -9,7 +9,7 @@ public class StockList {
 
 		ArrayList<Stock> stockList = new ArrayList<Stock>();
 
-		for (int rmv = 0; rmv < tableData.size(); rmv++) {
+		for (int rmve = 0; rmve < tableData.size(); rmve++) {
 			tableData.remove("-");
 			tableData.remove("USD");
 		}

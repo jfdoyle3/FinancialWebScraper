@@ -1,5 +1,7 @@
 package mvcscraper;
 
+import java.io.IOException;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -11,8 +13,10 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import ConsoleScraper.Login;
+
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/user")
 public class UserController {
 
 	@InitBinder 
@@ -31,16 +35,16 @@ public class UserController {
 
 	}
 
-	@RequestMapping("/showForm")
-	public String showForm (Model userModel) {
+	@RequestMapping("/login")
+	public String login (Model userModel) {
 
 		userModel.addAttribute("user", new User());
 
 		return "userlogin";
 	}
 
-	@RequestMapping("/processForm")
-	public String processForm(@Valid @ModelAttribute("user") User user, BindingResult userBindingResult) {
+	@RequestMapping("/loggingIn")
+	public String loggingIn(@Valid @ModelAttribute("user") User user, BindingResult userBindingResult) throws InterruptedException, IOException {
 
 		System.out.println("User email: |" + user.getEmail() + "|");
 		System.out.println("User password: |" + user.getPassword() + "|");
@@ -49,6 +53,7 @@ public class UserController {
 		if (userBindingResult.hasErrors()) {
 			return "userlogin";
 		} else {
+			Login.signIn();
 			return "statictable";
 		}
 	}

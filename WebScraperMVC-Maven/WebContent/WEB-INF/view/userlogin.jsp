@@ -29,7 +29,7 @@
 	<div class="row">
 		<div class="column"></div>
 		<div class="column">
-			<form:form action="processForm" modelAttribute="user"
+			<form:form action="loggingIn" modelAttribute="user"
 				class="col s12 offset-s1">
 				<div class="row">
 					<div class="input-field col s10">

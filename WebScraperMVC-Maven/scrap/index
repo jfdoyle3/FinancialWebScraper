@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+  <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <!DOCTYPE html>
 <html>
@@ -16,14 +16,21 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
 	rel="stylesheet" />
-<title>Home Portal</title>
+<title>Scraper Home</title>
 </head>
 <body>
-
+	<h2>Home Page</h2>
 
 	<form>
-		<a href="user/login" id="enter"
-			class="waves-effect waves-light btn">Enter</a>
+		<p>
+			Today's date:
+			<%=(new java.util.Date()).toLocaleString()%></p>
+		<%
+			out.println("Your IP address is " + request.getRemoteAddr());
+		%>
+		<br> <br> <a href="login/showForm">Login</a> 
+		<br> 
+		<a href="stock/showForm">Stock Table</a>
 	</form>
 	<footer>
 		<i>Typed by the fingers of Jim Doyle</i>

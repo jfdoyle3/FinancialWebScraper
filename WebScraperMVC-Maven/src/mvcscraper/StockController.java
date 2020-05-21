@@ -13,8 +13,8 @@ import entity.Stock;
 @RequestMapping("/stock")
 public class StockController {
 
-	@RequestMapping("/showForm")
-	public String showForm(Model stockModel) {
+	@RequestMapping("/history")
+	public String history(Model stockModel) {
 
 		List<Stock> stockList = entity.QueryDB.GetAllStocks();
 
