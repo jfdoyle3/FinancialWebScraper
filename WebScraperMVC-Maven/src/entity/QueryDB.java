@@ -15,6 +15,7 @@ public class QueryDB {
 	private static Session session = factory.getCurrentSession();
 			
 	
+			@SuppressWarnings("unchecked")
 			public static List<Stock> GetAllStocks() {
 			try {
 			session.beginTransaction();
