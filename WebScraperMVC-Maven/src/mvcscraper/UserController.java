@@ -1,6 +1,7 @@
 package mvcscraper;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javax.validation.Valid;
 
@@ -53,7 +54,7 @@ public class UserController {
 		if (userBindingResult.hasErrors()) {
 			return "userlogin";
 		} else {
-			Login.signIn();
+			
 			return "statictable";
 		}
 	}

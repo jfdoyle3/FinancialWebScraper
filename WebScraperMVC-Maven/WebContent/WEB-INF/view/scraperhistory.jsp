@@ -24,7 +24,7 @@
 <title>Scraper History</title>
 </head>
 <body>
-	<h2>Scraper History    -  DONE!!!!</h2>
+	<h2>Scraper History</h2>
 	<div class="container">
 	<!--  	<a id="scrape" class="waves-effect waves-light btn">Scrape</a> 
 		<a href="clear" id="reset" class="waves-effect waves-light btn">Reset</a> -->	
