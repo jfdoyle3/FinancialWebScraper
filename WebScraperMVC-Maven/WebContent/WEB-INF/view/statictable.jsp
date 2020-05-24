@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
+<%@ page import="ConsoleScraper.Login" %>
 
 <!DOCTYPE html>
 <html>
@@ -28,10 +28,10 @@
   <body>
     <h2>Static Table</h2>
     <div class="container">
-    <!--    <a  id="scraper" class="waves-effect waves-light btn">stocktable</a> -->
+  
     <!--    <a href="/processStocks" id="reset" class="waves-effect waves-light btn">Show Stock</a> -->
- 
-
+ 	Scraping: <%= Login.signIn() %>
+     <a  href="stock/scraperhistory" id="scraper" class="waves-effect waves-light btn">History</a> -->
       <br />
       <table class="highlight">
         <thead>
