@@ -14,7 +14,7 @@ public class DataBaseWriter {
 		try {
 
 			Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.1.201/financialscraper",
-					"jfdoyle3", "F1ipp3r6467");
+					"jfdoyle3", "Fl1pp3r6467");
 
 			String sql = "INSERT INTO stocktable (datestamp, symbol, lastprice,pricechange,changepercentage,markettime,volume,avgvol,marketcap) values (?,?,?,?,?,?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
