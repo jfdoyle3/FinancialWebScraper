@@ -1,4 +1,4 @@
-package ConsoleScraper;
+package com.careerdevs.scraper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,6 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.careerdevs.objects.Stock;
+
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -54,10 +57,10 @@ public class Login {
 			ArrayList<String> stockList = data.scrape(driver.getPageSource());
 			StockList stockTable = new StockList();
 			ArrayList<Stock> stocks = stockTable.createStockList(stockList);
-			System.out.printf("Scraping table completed.\n%d items scraped.\nWriting to Database", stocks.size());
-			DataBaseWriter db = new DataBaseWriter();
-			db.writeToDatabase(stocks);
-			System.out.println("Database entries completed\nEnd of Line.");
+			System.out.println("Scraping table completed.\nWriting to Database");
+		//	DataBaseWriter db = new DataBaseWriter();
+		//	db.writeToDatabase(stocks);
+		//	System.out.println("Database entries completed\nEnd of Line.");
 			
 		} finally {
 			driver.quit();

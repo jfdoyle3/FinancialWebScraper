@@ -1,4 +1,4 @@
-package ConsoleScraper;
+package com.careerdevs.scraper;
 
 import java.io.IOException;
 import java.util.ArrayList;

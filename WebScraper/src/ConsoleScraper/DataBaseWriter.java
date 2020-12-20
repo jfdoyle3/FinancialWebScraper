@@ -23,13 +23,13 @@ public class DataBaseWriter {
 				Timestamp timeStamp = new Timestamp(System.currentTimeMillis());
 				statement.setTimestamp(1, timeStamp);
 				statement.setString(2, stockList.get(idx).symbol);
-				statement.setString(3, stockList.get(idx).lastprice);
-				statement.setString(4, stockList.get(idx).pricechange);
-				statement.setString(5, stockList.get(idx).changepercentage);
-				statement.setString(6, stockList.get(idx).markettime);
+				statement.setString(3, stockList.get(idx).lastPrice);
+				statement.setString(4, stockList.get(idx).priceChange);
+				statement.setString(5, stockList.get(idx).changePercentage);
+				statement.setString(6, stockList.get(idx).marketTime);
 				statement.setString(7, stockList.get(idx).volume);
 				statement.setString(8, stockList.get(idx).avgvol);
-				statement.setString(9, stockList.get(idx).marketcap);
+				statement.setString(9, stockList.get(idx).marketCap);
 
 				statement.executeUpdate();
 
